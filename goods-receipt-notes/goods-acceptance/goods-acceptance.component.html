@@ -1,0 +1,92 @@
+<form class="form-horizontal">
+    <div class="form-group">
+        <label for="businessUnit" class="col-sm-3 control-label">Business Unit</label>
+        <div class="col-sm-3">
+            <input class="form-control input-sm" id="businessUnit" name="inputEmail3"  disabled >
+        </div>
+    </div>
+    <div class="form-group">   
+        <label for ="grnDocType" class="col-sm-3 control-label" >Document Type</label>
+        <div class="col-sm-3">
+            <input class="form-control input-sm" id="grnDocType" name="inputEmail3"  disabled >
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="poidAndNo" class="col-sm-3 control-label">PO ID/PO Number</label>
+        <div class="col-sm-3">
+            <search-input  id="poNo" [nameField]="'selectedPoNo'" name="selectedPoNo"
+           ></search-input> 
+        </div>
+        <label for="SysNo" class="col-sm-3 control-label">Sys. No.</label>
+        <div class="col-sm-3">
+            <input class="form-control input-sm" id="SysNo"  name="inputEmail3"  disabled >
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="sname" class="col-sm-3 control-label">Vendor</label>
+        <div class="col-sm-3">
+            <input class="form-control input-sm" id="sname" name="inputEmail3"  disabled >
+        </div>
+        <label for="grnNo" class="col-sm-3 control-label">GRN No</label>
+        <div class="col-sm-3">
+            <input class="form-control input-sm" id="grnNo" name="inputEmail3"  disabled >
+        </div>
+    </div>
+    <div class="form-group">
+        <label id="sBranchName" class="col-sm-3 control-label">Vendor Branch</label>
+        <div class="col-sm-3">
+            <input id="sBranchName" class="form-control input-sm" name="inputEmail3" >
+        </div>        
+    </div>
+    <div class="form-group">
+        <label for="itemgpName" class="col-sm-3 control-label">Item Group</label>
+        <div class="col-sm-3" >
+            <input id="itemgpName" class="form-control input-sm" name="inputEmail3" >
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="grnDate" class="col-sm-2 control-label"> GRN Date.</label>
+        <div class="col-sm-2">
+            <input id="grnDate" class="form-control input-sm" name="inputEmail3" >
+        </div>
+        <label for="dcNo" class="col-sm-2 control-label"> DC No.</label>
+        <div class="col-sm-2">
+            <input id="dcNo" class="form-control input-sm" name="inputEmail3">
+        </div>
+        <label for="dcdate" class="col-sm-2 control-label"> DC Date.</label>
+        <div class="col-sm-2">
+            <input id="dcdate" class="form-control input-sm" name="inputEmail3" >
+        </div>
+    </div>
+    <div class="form-group">
+        <label  class="col-sm-2 control-label" for="transferDetails">Transfer Inv.No./Tr.No./Dt.</label>
+        <div class="col-sm-2">
+            <input id="transferDetails" class="form-control input-sm" name="inputEmail3" >
+        </div>
+        
+    </div>
+    <hr/>
+</form>
+<div style="height: 280px;">
+    <tabset >
+        <tab heading="Items">
+            <grn-acceptance-item-grid-component id="itemgrid"></grn-acceptance-item-grid-component>
+        </tab>
+        <tab heading="Item Schedule"  > 
+            <grn-acceptance-schedule-grid-component id="schedulegrid"></grn-acceptance-schedule-grid-component>
+        </tab>
+        <tab heading="Component Details"  >
+            <grn-acceptance-comp-grid-component id=""></grn-acceptance-comp-grid-component>
+        </tab>
+    </tabset>
+</div>
+<div style="margin: 5px 0 0 0" class="buttons-bar">
+    <div class="row" style="max-width: 99%;">
+        <button type="button" class="btn btn-default btn-sm"  accesskey="S" title="Alt+S"><u>S</u>ave</button>
+        <button type="button" class="btn btn-default btn-sm" accesskey="R" title="Alt+R"><u>R</u>efresh</button>
+        <button type="button" class="btn btn-default btn-sm"   accesskey="A" title="Alt+A"><u>R</u>eport</button>
+        <button type="button" class="btn btn-default btn-sm"   accesskey="V" title="Alt+V">Voucher Print</button>
+    </div>
+</div>
+

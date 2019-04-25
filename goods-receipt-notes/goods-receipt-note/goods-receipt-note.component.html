@@ -1,0 +1,126 @@
+<form class="form-horizontal">
+    <div class="form-group">
+        <label for="grnBranch" class="col-sm-2 control-label">Business Unit</label>
+        <div class="col-sm-2">
+            <search-input   [nameField]="'brname'" name="businessUnit"
+            id="grnBranch"></search-input> 
+        </div>
+    <!-- </div>
+    <div class="form-group">    -->
+        <label for ="grnDocType" class="col-sm-2 control-label" >Document Type</label>
+        <div class="col-sm-2">
+            <input class="form-control input-sm" id="grnDocType" name="inputEmail3"  disabled>
+        </div>
+        <div class="checkbox col-sm-2 input-sm">
+            <label>
+                <input type="checkbox" name ="allowAdvance"  >Auto Invoice Verification
+            </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="poNo" class="col-sm-2 control-label">PO Number.</label>
+        <div class="col-sm-2">
+            <search-input  id="poNo" [nameField]="'selectedPoNo'" name="selectedPoNo"
+            ></search-input> 
+        </div>
+        <label for="grnNo" class="col-sm-2 control-label">GRN No.</label>
+        <div class="col-sm-2">
+            <input class="form-control input-sm" id="grnNo" name="inputEmail3" disabled >
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="supplierName" class="col-sm-2 control-label">Vendor </label>
+        <div class="col-sm-2">
+            <input class="form-control input-sm" id="sname" name="inputEmail3" disabled >
+        </div>
+    <!-- </div>
+    <div class="form-group"> -->
+        <label for="supplierBranchName" class="col-sm-2 control-label">Vendor Branch</label>
+        <div class="col-sm-2">
+            <input class="form-control input-sm" id ="supplierBranchName" name="inputEmail3" disabled >
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="itemgroup" class="col-sm-2 control-label">Item Group</label>
+        <div class="col-sm-2">
+            <input class="form-control input-sm" id ="itemgroup" name="inputEmail3" disabled >
+        </div>
+        <label for="grndate" class="col-sm-2 control-label">GRN Date</label>
+        <div class="col-sm-2">
+            <date-time-picker   name="grnDate"  ></date-time-picker>
+        </div>
+    </div>
+    <div class="form-group">
+       
+        <label for="dcNo" class="col-sm-2 control-label">DC No.</label>
+        <div class="col-sm-2">
+            <input class="form-control input-sm" id ="dcNo" name="inputEmail3"  >
+        </div>  
+        <label for="dcDate" class="col-sm-2 control-label">DC Date</label>
+        <div class="col-sm-2">
+            <input class="form-control input-sm" id ="dcdate" name="inputEmail3" >
+        </div>  
+    </div>
+    <div class="form-group">
+        <label for ="gatePassNo" class="col-sm-2 control-label">Gate Pass No.</label>
+        <div class="col-sm-2">
+            <input class="form-control input-sm" id="gatePassNo" name="inputEmail3">
+            
+        </div>
+        <label for ="gatePassdt" class="col-sm-2 control-label">Gate Pass Date</label>
+        <div class="col-sm-2">
+            <input class="form-control input-sm" id="gatePassdt" name="inputEmail3" >
+            
+        </div>
+        
+        <label for ="wayBillNo" class="col-sm-2 control-label">Way Bill No/Invoice No</label>
+        <div class="col-sm-2">
+            <input class="form-control input-sm" id="wayBillNo" name="inputEmail3" >
+            
+        </div>
+    </div>
+    <div class="form-group">
+        <!-- <button type="button" class=" col-sm-2 btn btn-default btn-sm " >Note</button> -->
+        <label class="col-sm-2 control-label" for ="inputEmail3">Note:</label>
+            <label for="inputEmail3" class="col-sm-2 control-label" ></label> 
+            <button type="button" class=" col-sm-2 btn btn-default btn-sm " >Transporter Details</button>
+            <label class="col-sm-2 control-label" for ="inputEmail3" style="color: blue">Goods Received</label>   
+        </div>
+        
+        <hr/>
+    </form>
+    
+    <div style="height: 280px;">
+        <tabset >
+            <tab heading="Items">
+                <div style="max-width: 99%;">
+                    <grn-item-grid-component #grnItemGrid ></grn-item-grid-component>
+                </div>
+            </tab>
+            <tab heading="Item Schedule"  > 
+                <grn-schedule-grid-component #genScheduleGrid></grn-schedule-grid-component>
+                
+            </tab>
+            <tab heading="Pending PO Details"  >
+                <item-detail-grid-component #itemDetail></item-detail-grid-component>
+            </tab>
+        </tabset>
+    </div>
+    <hr/>
+    <div style="margin: 5px 0 0 0" class="buttons-bar">
+        <div class="row" style="max-width: 99%;">
+            <button type="button" class="btn btn-default btn-sm"  accesskey="S" title="Alt+S"><u>S</u>ave</button>
+            <button type="button" class="btn btn-default btn-sm" accesskey="R" title="Alt+R"><u>R</u>efresh</button>
+            <button type="button" class="btn btn-default btn-sm"   accesskey="A" title="Alt+A"><u>R</u>eport</button>
+            <button type="button" class="btn btn-default btn-sm"   accesskey="V" title="Alt+V">Voucher Print</button>
+            
+            <button type="button" class="btn btn-default btn-sm"   accesskey="G" title="Alt+G">GRN Acceptance</button>
+            <button type="button" class="btn btn-default btn-sm"   accesskey="U" title="Alt+U">Upload Invoice</button>
+            <button type="button" class="btn btn-default btn-sm"   accesskey="D" title="Alt+D">Download Invoice</button>
+        </div>
+    </div>
+    
+    
+    
+    
+    
